@@ -16,11 +16,12 @@ class App extends Component {
   }
 
   render() {
+    const { users, loading } = this.state;
     return (
       <div className='App'>
         <Navbar />
         <div className='container'>
-          <Users users={this.state.users} />
+          <Users users={users} loading={loading} />
         </div>
       </div>
     );
